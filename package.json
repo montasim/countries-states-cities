@@ -1,7 +1,7 @@
 {
   "name": "countries-states-cities",
   "version": "1.0.0",
-  "description": "",
+  "description": "\uD83C\uDF0D World countries, states, regions, provinces, cities, and towns in JSON, SQL, XML, YAML, and CSV. All Countries, States, Cities with ISO2, ISO3, Country Code, Phone Code, Capital, Native Language, Time zones, Latitude, Longitude, Region, Subregion, Flag Emoji, and Currency.",
   "main": "../countries-states-cities/server.js",
   "type": "module",
   "engines": {

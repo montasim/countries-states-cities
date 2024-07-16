@@ -24,6 +24,7 @@
 -   [DO NOT FORGET TO DO](#do-not-forget-to-do)
 -   [TUTORIALS](#tutorials)
 -   [INSPIRATIONS](#inspirations)
+-   [SPETIAL THANKS](#special-thanks)
 -   [CONTRIBUTE](#contribute)
 -   [CONTRIBUTORS](#contributors)
 -   [SPECIAL THANKS](#special-thanks)
@@ -219,6 +220,14 @@ Vercel is the recommended option for hosting the files since it is free and easy
 <br/>
 
 ## <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=20&duration=1&pause=1&color=00B8B5&center=true&vCenter=true&repeat=false&width=140&height=40&lines=INSPIRATIONS" alt="INSPIRATIONS" id="inspirations" />
+
+[https://countrystatecity.in/](https://countrystatecity.in/)
+
+<br/>
+
+## <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=20&duration=1&pause=1&color=00B8B5&center=true&vCenter=true&repeat=false&width=165&height=40&lines=SPETIAL+THANKS" alt="SPETIAL THANKS" id="special-thanks" />
+
+[github.com/dr5hn/countries-states-cities-database](https://github.com/dr5hn/countries-states-cities-database) - For the countries, states, cities data.
 
 <br/>
 
