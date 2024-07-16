@@ -24,6 +24,14 @@ router
     .all(methodNotSupported);
 
 router
+    .route('/:ciso/states')
+    .get(
+        // cacheMiddleware.create(configuration.cache.timeout),
+        countriesController.getStateByCiso
+    )
+    .all(methodNotSupported);
+
+router
     .route('/:ciso/states/:siso')
     .get(
         // cacheMiddleware.create(configuration.cache.timeout),

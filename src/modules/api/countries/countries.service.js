@@ -74,6 +74,36 @@ const getByCiso = async (ciso) => {
     }
 };
 
+const getStateByCiso = async (ciso) => {
+    try {
+        // Fetch all countries from the database
+        const country = await StatesModel.find({ country_code: ciso }).lean();
+
+        // Check if countries exist in the database
+        if (country.length === 0) {
+            return errorResponse(
+                'No country found in the database.',
+                httpStatus.NOT_FOUND
+            );
+        }
+
+        // Successfully retrieved all countries
+        return sendResponse(
+            country,
+            'Successfully retrieved the state.',
+            httpStatus.OK
+        );
+    } catch (error) {
+        // Log and return error if the operation fails
+        loggerService.error(`Failed to get the state: ${error}`);
+
+        return errorResponse(
+            error.message || 'Failed to retrieve teh state.',
+            httpStatus.INTERNAL_SERVER_ERROR
+        );
+    }
+};
+
 const getStateByISO2 = async (ciso, siso) => {
     try {
         // Fetch all countries from the database
@@ -120,6 +150,7 @@ const getStateByISO2 = async (ciso, siso) => {
 const countriesService = {
     get,
     getByCiso,
+    getStateByCiso,
     getStateByISO2,
 };
 
