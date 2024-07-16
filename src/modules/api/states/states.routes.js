@@ -27,7 +27,7 @@ const router = express.Router();
 router
     .route('/')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         statesController.fetchAllStates
     )
     .all(methodNotSupported);
@@ -40,7 +40,7 @@ router
 router
     .route('/:ciso')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         statesController.fetchStateByCountryISO
     )
     .all(methodNotSupported);

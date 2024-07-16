@@ -33,7 +33,7 @@ const fetchAllStates = async (query) => {
         });
 
         // Fetch states from the database using the constructed conditions
-        const states = await CountryModel.find(conditions);
+        const states = await CountryModel.find(conditions).lean();
 
         // Check if states exist in the database
         if (states.length === 0) {
@@ -68,7 +68,7 @@ const fetchAllStates = async (query) => {
 const fetchStatesByCountryISO = async (ciso) => {
     try {
         // Fetch all states from the database
-        const states = await CountryModel.findOne({ iso2: ciso });
+        const states = await CountryModel.findOne({ iso2: ciso }).lean();
 
         // Check if states exist in the database
         if (states.length === 0) {

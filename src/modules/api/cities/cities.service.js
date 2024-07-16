@@ -24,7 +24,7 @@ import CountryModel from './cities.model.js';
 const getCitiesWithinCountry = async (ciso) => {
     try {
         // Fetch cities from the database using the constructed conditions
-        const cities = await CountryModel.find({ country_code: ciso });
+        const cities = await CountryModel.find({ country_code: ciso }).lean();
 
         // Check if cities exist in the database
         if (cities.length === 0) {

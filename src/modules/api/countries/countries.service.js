@@ -38,7 +38,7 @@ const fetchAllCountries = async (query) => {
         });
 
         // Fetch countries from the database using the constructed conditions
-        const countries = await CountryModel.find(conditions);
+        const countries = await CountryModel.find(conditions).lean();
 
         // Check if countries exist in the database
         if (countries.length === 0) {
@@ -73,7 +73,10 @@ const fetchAllCountries = async (query) => {
 const fetchCountryByISO = async (ciso) => {
     try {
         // Fetch all countries from the database
-        const countries = await CountryModel.findOne({ iso2: ciso });
+        const countries = await CountryModel.findOne({ iso2: ciso }).lean();
+
+        console.log(countries)
+        console.log(typeof countries)
 
         // Check if countries exist in the database
         if (countries.length === 0) {

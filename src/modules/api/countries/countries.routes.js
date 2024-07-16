@@ -27,7 +27,7 @@ const router = express.Router();
 router
     .route('/')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchAllCountries
     )
     .all(methodNotSupported);
@@ -40,7 +40,7 @@ router
 router
     .route('/:ciso')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchCountryByISO
     )
     .all(methodNotSupported);
@@ -53,7 +53,7 @@ router
 router
     .route('/:ciso/cities')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchCitiesByCountryISO
     )
     .all(methodNotSupported);
@@ -66,7 +66,7 @@ router
 router
     .route('/:ciso/states')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchStateByCountryISO
     )
     .all(methodNotSupported);
@@ -79,7 +79,7 @@ router
 router
     .route('/:ciso/states/:siso')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchStateByISO
     )
     .all(methodNotSupported);
@@ -92,7 +92,7 @@ router
 router
     .route('/:ciso/states/:siso/cities')
     .get(
-        // cacheMiddleware.create(configuration.cache.timeout),
+        cacheMiddleware.create(configuration.cache.timeout),
         countriesController.fetchCitiesByStateISO
     )
     .all(methodNotSupported);
