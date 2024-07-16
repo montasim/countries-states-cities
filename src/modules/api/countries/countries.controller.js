@@ -18,9 +18,18 @@ const getByCiso = asyncErrorHandler(async (req, res) => {
     res.status(countriesData.status).send(countriesData);
 });
 
+const getStateByISO2 = asyncErrorHandler(async (req, res) => {
+    const countriesData = await countriesService.getStateByISO2(req.params.ciso, req.params.siso);
+
+    countriesData.route = req.originalUrl;
+
+    res.status(countriesData.status).send(countriesData);
+});
+
 const countriesController = {
     get,
     getByCiso,
+    getStateByISO2,
 };
 
 export default countriesController;
