@@ -1,3 +1,18 @@
+/**
+ * @fileoverview Service layer for handling business logic associated with country, state, and city data retrieval.
+ * This file includes functions that interact directly with the database models to fetch and return data based
+ * on specific criteria such as country ISO codes and state ISO codes. Error handling and response formatting are
+ * managed within this layer.
+ *
+ * @requires loggerService: Service for logging error and info messages.
+ * @requires httpStatus: Constants defining HTTP status codes.
+ * @requires errorResponse: Utility to format error responses.
+ * @requires sendResponse: Utility to format successful responses.
+ * @requires CountryModel: Mongoose model for countries.
+ * @requires StatesModel: Mongoose model for states.
+ * @requires CitiesModel: Mongoose model for cities.
+ */
+
 import loggerService from '../../../service/logger.service.js';
 import httpStatus from '../../../constant/httpStatus.constants.js';
 import errorResponse from '../../../utilities/errorResponse.js';
@@ -6,7 +21,12 @@ import CountryModel from './countries.model.js';
 import StatesModel from "../states/states.model.js";
 import CitiesModel from "../cities/cities.model.js";
 
-const get = async (query) => {
+/**
+ * Fetches all countries based on query parameters.
+ * @param {Object} query - Query parameters for filtering countries.
+ * @returns {Promise<Object>} A promise that resolves to the response object formatted by sendResponse utility.
+ */
+const fetchAllCountries = async (query) => {
     try {
         // Construct a dynamic query based on provided parameters
         const conditions = {};
@@ -45,7 +65,12 @@ const get = async (query) => {
     }
 };
 
-const getByCiso = async (ciso) => {
+/**
+ * Fetches a single country by its ISO code.
+ * @param {string} ciso - Country ISO code.
+ * @returns {Promise<Object>} A promise that resolves to the response object formatted by sendResponse utility.
+ */
+const fetchCountryByISO = async (ciso) => {
     try {
         // Fetch all countries from the database
         const countries = await CountryModel.findOne({ iso2: ciso });
@@ -75,7 +100,12 @@ const getByCiso = async (ciso) => {
     }
 };
 
-const getStateByCiso = async (ciso) => {
+/**
+ * Fetches states for a given country using the country's ISO code.
+ * @param {string} ciso - Country ISO code.
+ * @returns {Promise<Object>} A promise that resolves to the response object formatted by sendResponse utility.
+ */
+const fetchStateByCountryISO = async (ciso) => {
     try {
         // Fetch all countries from the database
         const country = await StatesModel.find({ country_code: ciso }).lean();
@@ -105,7 +135,13 @@ const getStateByCiso = async (ciso) => {
     }
 };
 
-const getStateByISO2 = async (ciso, siso) => {
+/**
+ * Fetches a specific state within a country by both country and state ISO codes.
+ * @param {string} ciso - Country ISO code.
+ * @param {string} siso - State ISO code.
+ * @returns {Promise<Object>} A promise that resolves to the response object formatted by sendResponse utility.
+ */
+const fetchStateByISO = async (ciso, siso) => {
     try {
         // Fetch all countries from the database
         const country = await CountryModel.findOne({ iso2: ciso }).lean();
@@ -148,7 +184,13 @@ const getStateByISO2 = async (ciso, siso) => {
     }
 };
 
-const getCitiesInAState = async (ciso, siso) => {
+/**
+ * Fetches cities within a state identified by country and state ISO codes.
+ * @param {string} ciso - Country ISO code.
+ * @param {string} siso - State ISO code.
+ * @returns {Promise<Object>} A promise that resolves to the response object formatted by sendResponse utility.
+ */
+const fetchCitiesByStateISO = async (ciso, siso) => {
     try {
         // Filter for the specific state within the country's states
         const cities = await CitiesModel.find(
@@ -180,11 +222,11 @@ const getCitiesInAState = async (ciso, siso) => {
 };
 
 const countriesService = {
-    get,
-    getByCiso,
-    getStateByCiso,
-    getStateByISO2,
-    getCitiesInAState,
+    fetchAllCountries,
+    fetchCountryByISO,
+    fetchStateByCountryISO,
+    fetchStateByISO,
+    fetchCitiesByStateISO,
 };
 
 export default countriesService;

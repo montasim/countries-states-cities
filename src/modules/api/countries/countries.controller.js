@@ -1,63 +1,103 @@
+/**
+ * @fileoverview Controller for country-related operations.
+ * This file includes controllers that handle requests to fetch countries, states, and cities based
+ * on different criteria such as country ISO codes and state ISO codes. Each controller is designed
+ * to fetch data using the corresponding service and send responses to the client.
+ *
+ * @requires asyncErrorHandler: Middleware to handle errors in asynchronous operations gracefully.
+ * @requires countriesService: Service layer handling business logic related to country data.
+ * @requires citiesService: Service layer handling business logic related to city data within countries.
+ */
+
 import asyncErrorHandler from '../../../utilities/asyncErrorHandler.js';
 import countriesService from './countries.service.js';
 import citiesService from "../cities/cities.service.js";
 
-const get = asyncErrorHandler(async (req, res) => {
-    const query = req.query;
-    const countriesData = await countriesService.get(query);
+/**
+ * Fetches all countries based on query parameters and sends a formatted response.
+ * @param {Object} req - Express request object containing query parameters.
+ * @param {Object} res - Express response object used to send back data.
+ */
+const fetchAllCountries = asyncErrorHandler(async (req, res) => {
+    const response = await countriesService.fetchAllCountries(req.query);
 
-    countriesData.route = req.originalUrl; // Optional: Track the requested URL
+    response.route = req.originalUrl; // Optional: Track the requested URL
 
-    res.status(countriesData.status).send(countriesData);
+    res.status(response.status).send(response);
 });
 
-const getByCiso = asyncErrorHandler(async (req, res) => {
-    const countriesData = await countriesService.getByCiso(req.params.ciso);
+/**
+ * Fetches a single country by its ISO code and sends a formatted response.
+ * @param {Object} req - Express request object with parameters including 'ciso' for country ISO.
+ * @param {Object} res - Express response object for sending the response.
+ */
+const fetchCountryByISO = asyncErrorHandler(async (req, res) => {
+    const response = await countriesService.fetchCountryByISO(req.params.ciso);
 
-    countriesData.route = req.originalUrl;
+    response.route = req.originalUrl;
 
-    res.status(countriesData.status).send(countriesData);
+    res.status(response.status).send(response);
 });
 
-const getCitiesWithinCountry = asyncErrorHandler(async (req, res) => {
-    const citiesData = await citiesService.getCitiesWithinCountry(req.params.ciso);
+/**
+ * Fetches cities within a country identified by its ISO code and sends a formatted response.
+ * @param {Object} req - Express request object with parameters including 'ciso' for country ISO.
+ * @param {Object} res - Express response object for sending the response.
+ */
+const fetchCitiesByCountryISO = asyncErrorHandler(async (req, res) => {
+    const response = await citiesService.fetchCitiesByCountryISO(req.params.ciso);
 
-    citiesData.route = req.originalUrl;
+    response.route = req.originalUrl;
 
-    res.status(citiesData.status).send(citiesData);
+    res.status(response.status).send(response);
 });
 
-const getStateByCiso = asyncErrorHandler(async (req, res) => {
-    const countriesData = await countriesService.getStateByCiso(req.params.ciso);
+/**
+ * Fetches states within a country identified by its ISO code and sends a formatted response.
+ * @param {Object} req - Express request object with parameters including 'ciso' for country ISO.
+ * @param {Object} res - Express response object for sending the response.
+ */
+const fetchStateByCountryISO = asyncErrorHandler(async (req, res) => {
+    const response = await countriesService.fetchStateByCountryISO(req.params.ciso);
 
-    countriesData.route = req.originalUrl;
+    response.route = req.originalUrl;
 
-    res.status(countriesData.status).send(countriesData);
+    res.status(response.status).send(response);
 });
 
-const getStateByISO2 = asyncErrorHandler(async (req, res) => {
-    const countriesData = await countriesService.getStateByISO2(req.params.ciso, req.params.siso);
+/**
+ * Fetches a specific state by country and state ISO codes and sends a formatted response.
+ * @param {Object} req - Express request object with parameters including 'ciso' and 'siso' for country and state ISO codes.
+ * @param {Object} res - Express response object for sending the response.
+ */
+const fetchStateByISO  = asyncErrorHandler(async (req, res) => {
+    const response = await countriesService.fetchStateByISO(req.params.ciso, req.params.siso);
 
-    countriesData.route = req.originalUrl;
+    response.route = req.originalUrl;
 
-    res.status(countriesData.status).send(countriesData);
+    res.status(response.status).send(response);
 });
 
-const getCitiesInAState = asyncErrorHandler(async (req, res) => {
-    const countriesData = await countriesService.getCitiesInAState(req.params.ciso, req.params.siso);
+/**
+ * Fetches cities within a state identified by country and state ISO codes and sends a formatted response.
+ * @param {Object} req - Express request object with parameters including 'ciso' and 'siso' for country and state ISO codes.
+ * @param {Object} res - Express response object for sending the response.
+ */
+const fetchCitiesByStateISO  = asyncErrorHandler(async (req, res) => {
+    const response = await countriesService.fetchCitiesByStateISO(req.params.ciso, req.params.siso);
 
-    countriesData.route = req.originalUrl;
+    response.route = req.originalUrl;
 
-    res.status(countriesData.status).send(countriesData);
+    res.status(response.status).send(response);
 });
 
 const countriesController = {
-    get,
-    getByCiso,
-    getCitiesWithinCountry,
-    getStateByCiso,
-    getStateByISO2,
-    getCitiesInAState,
+    fetchAllCountries,
+    fetchCountryByISO,
+    fetchCitiesByCountryISO,
+    fetchStateByCountryISO,
+    fetchStateByISO,
+    fetchCitiesByStateISO,
 };
 
 export default countriesController;
