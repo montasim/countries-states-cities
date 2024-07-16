@@ -4,6 +4,7 @@ import errorResponse from '../../../utilities/errorResponse.js';
 import sendResponse from '../../../utilities/sendResponse.js';
 import CountryModel from './countries.model.js';
 import StatesModel from "../states/states.model.js";
+import CitiesModel from "../cities/cities.model.js";
 
 const get = async (query) => {
     try {
@@ -141,7 +142,38 @@ const getStateByISO2 = async (ciso, siso) => {
         loggerService.error(`Failed to get the state: ${error}`);
 
         return errorResponse(
-            error.message || 'Failed to retrieve teh state.',
+            error.message || 'Failed to retrieve the state.',
+            httpStatus.INTERNAL_SERVER_ERROR
+        );
+    }
+};
+
+const getCitiesInAState = async (ciso, siso) => {
+    try {
+        // Filter for the specific state within the country's states
+        const cities = await CitiesModel.find(
+            { country_code: ciso, state_code: siso },
+        ).lean();
+
+        if (!cities) {
+            return errorResponse(
+                'No cities found in the database.',
+                httpStatus.NOT_FOUND
+            );
+        }
+
+        // Successfully retrieved all countries
+        return sendResponse(
+            cities,
+            'Successfully retrieved the cities.',
+            httpStatus.OK
+        );
+    } catch (error) {
+        // Log and return error if the operation fails
+        loggerService.error(`Failed to get the cities: ${error}`);
+
+        return errorResponse(
+            error.message || 'Failed to retrieve the cities.',
             httpStatus.INTERNAL_SERVER_ERROR
         );
     }
@@ -152,6 +184,7 @@ const countriesService = {
     getByCiso,
     getStateByCiso,
     getStateByISO2,
+    getCitiesInAState,
 };
 
 export default countriesService;
