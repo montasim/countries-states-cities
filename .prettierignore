@@ -1,0 +1,50 @@
+####################################################
+# Prettier Ignore Configuration File
+####################################################
+# This file specifies patterns of files and directories that Prettier should ignore.
+# Using this file helps avoid formatting conflicts and unnecessary processing of files not meant for modification.
+
+####################################################
+# IDE and Project Files
+# Purpose: Prevent Prettier from formatting project and IDE configuration files.
+# Use: Ensures that configurations and settings files are not altered unintentionally.
+####################################################
+.idea
+.prettierignore
+.babelrc
+.env
+.env.development
+.env.staging
+.env.production
+.env.test
+
+####################################################
+# Dependency Directories
+# Purpose: Exclude third-party code from formatting.
+# Use: Improves performance by skipping formatting on large, unmodifiable directories.
+####################################################
+node_modules
+
+####################################################
+# Build Artifacts and Logs
+# Purpose: Exclude temporary and output files from formatting.
+# Use: Keeps Prettier focused on source files and prevents accidental reformatting of outputs.
+####################################################
+build
+logs
+
+####################################################
+# Documentation and Licensing
+# Purpose: Exclude documentation and legal files, which may need to retain specific formatting.
+# Use: Protects the integrity and layout of documentation and legal notices.
+####################################################
+documentation
+LICENSE
+SECURITY.md
+
+####################################################
+# Package Management
+# Purpose: Exclude specific package manager lock files and config files.
+# Use: Prevents unintentional formatting changes that could affect reproducibility or consistency.
+####################################################
+yarn.lock
