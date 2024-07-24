@@ -2,17 +2,28 @@
 
 <!-- repository summary badges start -->
 <div>
-    <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub" src="https://img.shields.io/github/license/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub contributors badge" src="https://img.shields.io/github/contributors/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub language count badge" src="https://img.shields.io/github/languages/count/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5"/>
+    <img alt="GitHub top language badge" src="https://img.shields.io/github/languages/top/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub code size badge" src="https://img.shields.io/github/languages/code-size/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub repo size badge" src="https://img.shields.io/github/repo-size/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub file count badge" src="https://img.shields.io/github/directory-file-count/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub open issues badge" src="https://img.shields.io/github/issues-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub closed issues badge" src="https://img.shields.io/github/issues-closed-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub open pull requests badge" src="https://img.shields.io/github/issues-pr-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub closed pull requests badge" src="https://img.shields.io/github/issues-pr-closed-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub active milestones badge" src="https://img.shields.io/github/milestones/open/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub completed milestones badge" src="https://img.shields.io/github/milestones/closed/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub license badge" src="https://img.shields.io/github/license/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub last commit badge" src="https://img.shields.io/github/last-commit/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub Discussions badge" src="https://img.shields.io/github/discussions/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
 </div>
 <!-- repository summary badges end -->
 
 
-🌍 World countries, states, regions, provinces, cities, and towns in JSON. All Countries, States, Cities with ISO2, ISO3, Country Code, Phone Code, Capital, Native Language, Time zones, Latitude, Longitude, Region, Subregion, Flag Emoji, and Currency.
+<br/>
+
+🌍 World countries, states, regions, provinces, cities, and towns api. All Countries, States, Cities with ISO2, ISO3, Country Code, Phone Code, Capital, Native Language, Time zones, Latitude, Longitude, Region, Subregion, Flag Emoji, and Currency.
 
 
 <br/>
@@ -41,7 +52,543 @@
 
 ## <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=20&duration=1&pause=1&color=00B8B5&center=true&vCenter=true&repeat=false&width=100&height=40&lines=FEATURES" alt="FEATURES" id="features" />
 
-### APIs
+1. ### Get a list of Countries
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries
+   
+   - ### Request Parameters
+   
+      No parameters
+   
+   - ### Example Success Response
+
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": [
+         {
+            "_id": "66962e25e7dec94bff9a9ba9",
+            "id": 19,
+            "name": "Bangladesh",
+            "iso3": "BGD",
+            "iso2": "BD",
+            "numeric_code": "050",
+            "phone_code": "880",
+            "capital": "Dhaka",
+            "currency": "BDT",
+            "currency_name": "Bangladeshi taka",
+            "currency_symbol": "৳",
+            "tld": ".bd",
+            "native": "Bangladesh",
+            "region": "Asia",
+            "region_id": "3",
+            "subregion": "Southern Asia",
+            "subregion_id": "14",
+            "nationality": "Bangladeshi",
+            "timezones": [
+               {
+               "zoneName": "Asia/Dhaka",
+               "gmtOffset": 21600,
+               "gmtOffsetName": "UTC+06:00",
+               "abbreviation": "BDT",
+               "tzName": "Bangladesh Standard Time"
+               }
+            ],
+            "translations": {
+               "kr": "방글라데시",
+               "pt-BR": "Bangladesh",
+               "pt": "Bangladeche",
+               "nl": "Bangladesh",
+               "hr": "Bangladeš",
+               "fa": "بنگلادش",
+               "de": "Bangladesch",
+               "es": "Bangladesh",
+               "fr": "Bangladesh",
+               "ja": "バングラデシュ",
+               "it": "Bangladesh",
+               "cn": "孟加拉",
+               "tr": "Bangladeş"
+            },
+            "latitude": "24.00000000",
+            "longitude": "90.00000000",
+            "emoji": "🇧🇩",
+            "emojiU": "U+1F1E7 U+1F1E9"
+            },
+         ...
+         ],
+         "message": "Successfully retrieved countries matching criteria.",
+         "status": 200,
+         "route": "/api/v1/countries"
+      }
+     ```
+
+2. ### Get country details from ISO2 code
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries/[ciso]
+   
+   - ### Request Parameters
+   
+      <table align="center">
+       <thead align="center">
+           <tr>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Located in
+               </th>
+               <th>
+                   Description
+               </th>
+               <th>
+                   Required
+               </th>
+               <th>
+                   Type
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   [ciso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of Country
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+       </thead>
+   </table>
+   
+   - ### Example Success Response
+
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": {
+            "_id": "66962e25e7dec94bff9a9ba9",
+            "id": 19,
+            "name": "Bangladesh",
+            "iso3": "BGD",
+            "iso2": "BD",
+            "numeric_code": "050",
+            "phone_code": "880",
+            "capital": "Dhaka",
+            "currency": "BDT",
+            "currency_name": "Bangladeshi taka",
+            "currency_symbol": "৳",
+            "tld": ".bd",
+            "native": "Bangladesh",
+            "region": "Asia",
+            "region_id": "3",
+            "subregion": "Southern Asia",
+            "subregion_id": "14",
+            "nationality": "Bangladeshi",
+            "timezones": [
+               {
+               "zoneName": "Asia/Dhaka",
+               "gmtOffset": 21600,
+               "gmtOffsetName": "UTC+06:00",
+               "abbreviation": "BDT",
+               "tzName": "Bangladesh Standard Time"
+               }
+            ],
+            "translations": {
+               "kr": "방글라데시",
+               "pt-BR": "Bangladesh",
+               "pt": "Bangladeche",
+               "nl": "Bangladesh",
+               "hr": "Bangladeš",
+               "fa": "بنگلادش",
+               "de": "Bangladesch",
+               "es": "Bangladesh",
+               "fr": "Bangladesh",
+               "ja": "バングラデシュ",
+               "it": "Bangladesh",
+               "cn": "孟加拉",
+               "tr": "Bangladeş"
+            },
+            "latitude": "24.00000000",
+            "longitude": "90.00000000",
+            "emoji": "🇧🇩",
+            "emojiU": "U+1F1E7 U+1F1E9"
+         },
+         "message": "Successfully retrieved the country.",
+         "status": 200,
+         "route": "/api/v1/countries/BD"
+      }
+     ```
+
+
+3. ### Get a list of States
+
+   GET: https://countries-states-cities.vercel.app/api/v1/states
+   
+   - ### Request Parameters
+   
+      No parameters
+   
+   - ### Example Success Response
+
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": [
+            {
+               "_id": "66962e1ae7dec94bff9a891d",
+               "id": 759,
+               "name": "Rangpur District",
+               "country_id": 19,
+               "country_code": "BD",
+               "country_name": "Bangladesh",
+               "state_code": "55",
+               "type": "district",
+               "latitude": "25.74679250",
+               "longitude": "89.25083350"
+            },
+            ...
+         ],
+         "message": "Successfully retrieved states matching criteria.",
+         "status": 200,
+         "route": "/api/v1/states"
+      }
+     ```
+
+4. ### Get a list of States within country
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries/[ciso]/states
+   
+   - ### Request Parameters
+
+      <table align="center">
+       <thead align="center">
+           <tr>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Located in
+               </th>
+               <th>
+                   Description
+               </th>
+               <th>
+                   Required
+               </th>
+               <th>
+                   Type
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   [ciso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of Country
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+       </thead>
+   </table>
+   
+   - ### Example Success Response
+   
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": [
+         {
+         "_id": "66962e1ae7dec94bff9a891d",
+         "id": 759,
+         "name": "Rangpur District",
+         "country_id": 19,
+         "country_code": "BD",
+         "country_name": "Bangladesh",
+         "state_code": "55",
+         "type": "district",
+         "latitude": "25.74679250",
+         "longitude": "89.25083350"
+         },
+         ...
+         ],
+         "message": "Successfully retrieved the state.",
+         "status": 200,
+         "route": "/api/v1/countries/BD/states"
+      }
+      ```
+
+
+5. ### Get the state details from ISO2 Code
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries/[ciso]/states/[siso]
+   
+   - ### Request Parameters
+
+      <table align="center">
+       <thead align="center">
+           <tr>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Located in
+               </th>
+               <th>
+                   Description
+               </th>
+               <th>
+                   Required
+               </th>
+               <th>
+                   Type
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   [ciso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of Country
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   [siso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of State
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+       </thead>
+   </table>
+   
+   - ### Example Success Response
+   
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": {
+            "_id": "66962e1ae7dec94bff9a891d",
+            "id": 759,
+            "name": "Rangpur District",
+            "country_id": 19,
+            "country_code": "BD",
+            "country_name": "Bangladesh",
+            "state_code": "55",
+            "type": "district",
+            "latitude": "25.74679250",
+            "longitude": "89.25083350"
+         },
+         "message": "Successfully retrieved the state.",
+         "status": 200,
+         "route": "/api/v1/countries/BD/states/55"
+      }
+      ```
+
+
+6. ### Get the list of cities in a state
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries/[ciso]/states/[siso]/cities
+   
+   - ### Request Parameters
+
+      <table align="center">
+       <thead align="center">
+           <tr>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Located in
+               </th>
+               <th>
+                   Description
+               </th>
+               <th>
+                   Required
+               </th>
+               <th>
+                   Type
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   [ciso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of Country
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   [siso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of State
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+       </thead>
+   </table>
+   
+   - ### Example Success Response
+   
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": [
+            {
+               "_id": "66962e33e7dec94bff9abe90",
+               "id": 8577,
+               "name": "Rangpur",
+               "state_id": 759,
+               "state_code": "55",
+               "state_name": "Rangpur District",
+               "country_id": 19,
+               "country_code": "BD",
+               "country_name": "Bangladesh",
+               "latitude": "25.73333000",
+               "longitude": "89.25000000",
+               "wikiDataId": "Q2344570"
+            },
+            ...
+         ], 
+         "message": "Successfully retrieved the cities.",
+         "status": 200,
+         "route": "/api/v1/countries/BD/states/55/cities"
+      }
+      ```
+
+
+7. ### Get a list of Cities within country
+
+   GET: https://countries-states-cities.vercel.app/api/v1/countries/[ciso]/cities
+   
+   - ### Request Parameters
+
+      <table align="center">
+       <thead align="center">
+           <tr>
+               <th>
+                   Name
+               </th>
+               <th>
+                   Located in
+               </th>
+               <th>
+                   Description
+               </th>
+               <th>
+                   Required
+               </th>
+               <th>
+                   Type
+               </th>
+           </tr>
+           <tr>
+               <td>
+                   [ciso]
+               </td>
+               <td>
+                   URL
+               </td>
+               <td>
+                   ISO2 Code of Country
+               </td>
+               <td>
+                   required
+               </td>
+               <td>
+                   string
+               </td>
+           </tr>
+       </thead>
+   </table>
+   
+   - ### Example Success Response
+   
+      ```json
+      {
+         "timeStamp": "2024-07-24T14:58:55.767Z",
+         "success": true,
+         "data": [
+            {
+               "_id": "66962e33e7dec94bff9abe90",
+               "id": 8577,
+               "name": "Rangpur",
+               "state_id": 759,
+               "state_code": "55",
+               "state_name": "Rangpur District",
+               "country_id": 19,
+               "country_code": "BD",
+               "country_name": "Bangladesh",
+               "latitude": "25.73333000",
+               "longitude": "89.25000000",
+               "wikiDataId": "Q2344570"
+            },
+            ...
+         ], 
+         "message": "Successfully retrieved the cities.",
+         "status": 200,
+         "route": "/api/v1/countries/BD/cities"
+      }
+      ```
 
 <br/>
 
