@@ -1,4 +1,4 @@
-# <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&duration=1&pause=1&color=EB008B&center=true&vCenter=true&repeat=false&width=310&height=40&lines=COUNTRIES+STATES+CITIES" alt="COUNTRIES STATES CITIES" />
+# <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&duration=1&pause=1&color=EB008B&center=true&vCenter=true&repeat=false&width=358&height=40&lines=COUNTRIES+STATES+CITIES+API" alt="COUNTRIES STATES CITIES API" />
 
 <!-- repository summary badges start -->
 <div>
@@ -10,6 +10,12 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
 </div>
 <!-- repository summary badges end -->
+
+
+🌍 World countries, states, regions, provinces, cities, and towns in JSON. All Countries, States, Cities with ISO2, ISO3, Country Code, Phone Code, Capital, Native Language, Time zones, Latitude, Longitude, Region, Subregion, Flag Emoji, and Currency.
+
+
+<br/>
 
 ## <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=20&duration=1&pause=1&color=00B8B5&center=true&vCenter=true&repeat=false&width=120&height=40&lines=CONTENTS:" alt="CONTENTS:" />
 
