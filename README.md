@@ -1,22 +1,22 @@
-# <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&duration=1&pause=1&color=EB008B&center=true&vCenter=true&repeat=false&width=358&height=40&lines=COUNTRIES+STATES+CITIES+API" alt="COUNTRIES STATES CITIES API" />
+# <img loading="lazy" src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&duration=1&pause=1&color=EB008B&center=true&vCenter=true&repeat=false&width=310&height=40&lines=COUNTRIES+STATES+CITIES" alt="COUNTRIES STATES CITIES" />
 
 <!-- repository summary badges start -->
 <div>
-    <img alt="GitHub contributors badge" src="https://img.shields.io/github/contributors/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub language count badge" src="https://img.shields.io/github/languages/count/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5"/>
-    <img alt="GitHub top language badge" src="https://img.shields.io/github/languages/top/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub code size badge" src="https://img.shields.io/github/languages/code-size/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub repo size badge" src="https://img.shields.io/github/repo-size/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub file count badge" src="https://img.shields.io/github/directory-file-count/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub open issues badge" src="https://img.shields.io/github/issues-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub closed issues badge" src="https://img.shields.io/github/issues-closed-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub open pull requests badge" src="https://img.shields.io/github/issues-pr-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub closed pull requests badge" src="https://img.shields.io/github/issues-pr-closed-raw/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub active milestones badge" src="https://img.shields.io/github/milestones/open/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub completed milestones badge" src="https://img.shields.io/github/milestones/closed/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub license badge" src="https://img.shields.io/github/license/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub last commit badge" src="https://img.shields.io/github/last-commit/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
-    <img alt="GitHub Discussions badge" src="https://img.shields.io/github/discussions/montasim/countries-states-cities-api?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub contributors badge" src="https://img.shields.io/github/contributors/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub language count badge" src="https://img.shields.io/github/languages/count/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5"/>
+    <img alt="GitHub top language badge" src="https://img.shields.io/github/languages/top/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub code size badge" src="https://img.shields.io/github/languages/code-size/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub repo size badge" src="https://img.shields.io/github/repo-size/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub file count badge" src="https://img.shields.io/github/directory-file-count/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub open issues badge" src="https://img.shields.io/github/issues-raw/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub closed issues badge" src="https://img.shields.io/github/issues-closed-raw/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub open pull requests badge" src="https://img.shields.io/github/issues-pr-raw/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub closed pull requests badge" src="https://img.shields.io/github/issues-pr-closed-raw/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub active milestones badge" src="https://img.shields.io/github/milestones/open/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub completed milestones badge" src="https://img.shields.io/github/milestones/closed/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub license badge" src="https://img.shields.io/github/license/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub last commit badge" src="https://img.shields.io/github/last-commit/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
+    <img alt="GitHub Discussions badge" src="https://img.shields.io/github/discussions/montasim/countries-states-cities?labelColor=EB008B&color=00B8B5">
 </div>
 <!-- repository summary badges end -->
 
