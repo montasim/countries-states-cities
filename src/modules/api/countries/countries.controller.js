@@ -45,7 +45,7 @@ const fetchCountryByISO = asyncErrorHandler(async (req, res) => {
  * @param {Object} res - Express response object for sending the response.
  */
 const fetchCitiesByCountryISO = asyncErrorHandler(async (req, res) => {
-    const response = await citiesService.fetchCitiesByCountryISO(req.params.ciso);
+    const response = await citiesService.getCitiesWithinCountry(req.params.ciso);
 
     response.route = req.originalUrl;
 
